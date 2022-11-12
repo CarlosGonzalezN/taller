@@ -48,7 +48,7 @@ namespace Taller.Controllers
             return View(oAutoVM);
 
         }
-
+       
         [HttpPost]
         public IActionResult Auto_Detalle(AutoVM oAutoVM)
         {
@@ -64,6 +64,23 @@ namespace Taller.Controllers
             return RedirectToAction("Index", "Home");
 
 
+        }
+        [HttpGet]
+        public IActionResult Eliminar(int Id)
+        {
+            Auto oAuto = _DBContext.Autos.Include(t => t.oTecnico).Include(e => e.oEstado).Where(a => a.Id == Id).FirstOrDefault();
+
+            return View(oAuto);
+        }
+
+        [HttpPost]
+        public IActionResult Eliminar(Auto oAuto)
+        {
+            
+            _DBContext.Autos.Remove(oAuto);
+            _DBContext.SaveChanges();
+
+            return View(oAuto);
         }
 
 

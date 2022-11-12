@@ -4,13 +4,13 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-@if (Model.oAuto.Id == 0)
+@if (Model.oAuto.Id==0)
 {
-            <h1>Crear Auto</h1>
+            <h1>Crear ingreso del veiculo</h1>
 }
 else
 {
-        <h1>Auto Detalle</h1>
+        <h1> Detalles del Veiculo</h1>
 }
 <div class="row">
     <div class="col-sm-4">
@@ -62,6 +62,10 @@ else
              <div class="mb-2">
                 <label class="form-label" asp-for="oAuto.Problema">Problema </label>
                 <input class="form-control form-control-sm" asp-for="oAuto.Problema" type="number"/>
+            </div>
+             <div class="mb-2">
+                <label class="form-label" asp-for="oAuto.Solucion">Solución </label>
+                <input class="form-control form-control-sm" asp-for="oAuto.Solucion" type="number"/>
             </div>
                 <div class="mb-3">
                 <label class="form-label" asp-for="oAuto.oTecnico">Tecnico responsable</label>

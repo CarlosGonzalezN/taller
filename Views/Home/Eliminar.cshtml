@@ -1,0 +1,84 @@
+﻿@model Taller.Model.Auto
+@{
+    ViewData["Title"] = "Eliminar";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h3 class="text-danger"> Estas seguro que lo quiere eliminar?</h3>
+<hr />
+
+<div class="row">
+    <div class="col-sm-4">
+        <form asp-action="Eliminar"asp-asp-controller="Home" method="post">
+            <input type="hidden" asp-for="Id"/>
+             <div class="mb-2">
+                <label class="form-label" asp-for="Patente">Patente</label>
+                <input class="form-control form-control-sm" asp-for="Patente" type="text" />
+            </div>
+             <div class="mb-2">
+                <label class="form-label" asp-for="Marca">Marca</label>
+                <input class="form-control form-control-sm" asp-for="Marca" type="text"/>
+            </div>
+             <div class="mb-2">
+                <label class="form-label" asp-for="Modelo">Modelo</label>
+                <input class="form-control form-control-sm" asp-for="Modelo" type="text"/>
+            </div>
+            <div class="mb-2">
+                <label class="form-label" asp-for="NChasis">Numero de Chasis</label>
+                <input class="form-control form-control-sm" asp-for="NChasis" type="text"/>
+            </div>
+             <div class="mb-2">
+                <label class="form-label" asp-for="Año">Año</label>
+                <input class="form-control form-control-sm" asp-for="Año" type="text"/>
+            </div>
+             <div class="mb-2">
+                <label class="form-label" asp-for="Color">Color </label>
+                <input class="form-control form-control-sm" asp-for="Color" type="text"/>
+            </div>
+            <div class="mb-2">
+                <label class="form-label">Datos del Cliente</label>
+            </div>
+             <div class="mb-2">
+                <label class="form-label" asp-for="TitularApellido">Apellido</label>
+                <input class="form-control form-control-sm" asp-for="TitularApellido" type="text"/>
+            </div>
+            <div class="mb-2">
+                <label class="form-label" asp-for="TitularNombre">Nombre</label>
+                <input class="form-control form-control-sm" asp-for="TitularNombre" type="text"/>
+            </div>
+            <div class="mb-2">
+                <label class="form-label" asp-for="Celular">Celucar</label>
+                <input class="form-control form-control-sm" asp-for="Celular" type="number"/>
+            </div>
+             <div class="mb-2">
+                <label class="form-label" asp-for="Km">KM (al momento del ingreso) </label>
+                <input class="form-control form-control-sm" asp-for="Km" type="number"/>
+            </div>
+             <div class="mb-2">
+                <label class="form-label" asp-for="Problema">Problema </label>
+                <input class="form-control form-control-sm" asp-for="Problema" type="number"/>
+            </div>
+             <div class="mb-2">
+                <label class="form-label" asp-for="Solucion">Solución </label>
+                <input class="form-control form-control-sm" asp-for="Solucion" type="number"/>
+            </div>
+                <div class="mb-3">
+                <label class="form-label" asp-for="IdTecnico">Tecnico responsable</label>
+                <input class="form-control form-control-sm" asp-for="oTecnico.Apellido" type="text"/>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" asp-for="IdEstado">Estado del auto</label>
+                <input class="form-control form-control-sm" asp-for="oEstado.Descripcion" type="text"/>
+            </div>
+
+            <div class="mb-2">
+                <button class="btn btn-danger btn-sm w25" type="submit">Eliminar</button>
+               
+                 <a class="btn btn-success btn-sm" asp-action="Index" asp-controller="Home" >Volver</a>
+            </div>
+
+        </form>
+    </div>
+</div>
+
+
