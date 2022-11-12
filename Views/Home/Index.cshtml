@@ -20,7 +20,6 @@
                         <th>Color</th>
                         <th>Tecnico</th>
                         <th>Tarea</th>
-                        <th></th>
                     </tr>
                 </thead>
                 <tbody>
@@ -35,8 +34,8 @@
                                 <td>@item.oTecnico.Apellido</td>
                                 <td>@item.oEstado.Descripcion</td>
                                 <td>
-                                        <a class="btn btn-primary btn-sm"asp-action="Auto_detalle" asp-controller="Home" asp-route-idAuto="@item.Id">Editar</a>
-                                         <a class="btn btn-danger btn-sm"asp-action="Eliminar" asp-controller="Home" asp-route-idAuto="@item.Id">Eliminar</a>
+                                        <a class="btn btn-primary btn-sm"asp-action="Auto_detalle" asp-controller="Home" asp-route-id="@item.Id">Editar</a>
+                                         <a class="btn btn-danger btn-sm"asp-action="Eliminar" asp-controller="Home" asp-route-id="@item.Id">Eliminar</a>
                                 </td>
                             </tr>
                 }
