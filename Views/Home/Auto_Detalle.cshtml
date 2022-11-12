@@ -28,6 +28,10 @@ else
                 <label class="form-label" asp-for="oAuto.Modelo">Modelo</label>
                 <input class="form-control form-control-sm" asp-for="oAuto.Modelo" type="text"/>
             </div>
+            <div class="mb-2">
+                <label class="form-label" asp-for="oAuto.NChasis">Numero de Chasis</label>
+                <input class="form-control form-control-sm" asp-for="oAuto.NChasis" type="text"/>
+            </div>
              <div class="mb-2">
                 <label class="form-label" asp-for="oAuto.Año">Año</label>
                 <input class="form-control form-control-sm" asp-for="oAuto.Año" type="text"/>
@@ -36,13 +40,28 @@ else
                 <label class="form-label" asp-for="oAuto.Color">Color </label>
                 <input class="form-control form-control-sm" asp-for="oAuto.Color" type="text"/>
             </div>
-             <div class="mb-2">
-                <label class="form-label" asp-for="oAuto.Km">Color </label>
-                <input class="form-control form-control-sm" asp-for="oAuto.Km" type="text"/>
+            <div class="mb-2">
+                <label class="form-label">Datos del Cliente</label>
             </div>
              <div class="mb-2">
-                <label class="form-label" asp-for="oAuto.Problema">Color </label>
-                <input class="form-control form-control-sm" asp-for="oAuto.Problema" type="text"/>
+                <label class="form-label" asp-for="oAuto.TitularApellido">Apellido</label>
+                <input class="form-control form-control-sm" asp-for="oAuto.TitularApellido" type="text"/>
+            </div>
+            <div class="mb-2">
+                <label class="form-label" asp-for="oAuto.TitularNombre">Nombre</label>
+                <input class="form-control form-control-sm" asp-for="oAuto.TitularNombre" type="text"/>
+            </div>
+            <div class="mb-2">
+                <label class="form-label" asp-for="oAuto.Celular">Celucar</label>
+                <input class="form-control form-control-sm" asp-for="oAuto.Celular" type="number"/>
+            </div>
+             <div class="mb-2">
+                <label class="form-label" asp-for="oAuto.Km">KM (al momento del ingreso) </label>
+                <input class="form-control form-control-sm" asp-for="oAuto.Km" type="number"/>
+            </div>
+             <div class="mb-2">
+                <label class="form-label" asp-for="oAuto.Problema">Problema </label>
+                <input class="form-control form-control-sm" asp-for="oAuto.Problema" type="number"/>
             </div>
                 <div class="mb-3">
                 <label class="form-label" asp-for="oAuto.oTecnico">Tecnico responsable</label>
