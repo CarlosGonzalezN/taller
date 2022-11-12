@@ -1,0 +1,46 @@
+﻿@model List<Taller.Model.Auto>
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="card">
+        <div class="card-header">
+            <h5>Lista de Autos</h5>
+        </div>
+        <div class="card-body">
+            <a class="btn btn-success btn-sm" asp-action="Auto_detalle" asp-controller="Home" asp-route-idAuto="0">Crear nuevo</a>
+            <hr />
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Patente</th>
+                        <th>Marca</th>
+                        <th>Modelo</th>
+                        <th>Año</th>
+                        <th>Color</th>
+                        <th>Tecnico</th>
+                        <th>Tarea</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                @foreach (var item in Model)
+                {
+                            <tr>
+                                <td>@item.Patente</td>
+                                <td>@item.Marca</td>
+                                <td>@item.Modelo</td>
+                                <td>@item.Año</td>
+                                <td>@item.Color</td>
+                                <td>@item.oTecnico.Apellido</td>
+                                <td>@item.oEstado.Descripcion</td>
+                                <td>
+                                        <a class="btn btn-primary btn-sm"asp-action="Auto_detalle" asp-controller="Home" asp-route-idAuto="@item.Id">Editar</a>
+                                         <a class="btn btn-danger btn-sm"asp-action="Eliminar" asp-controller="Home" asp-route-idAuto="@item.Id">Eliminar</a>
+                                </td>
+                            </tr>
+                }
+                </tbody>
+            </table>
+        </div>
+    </div>
