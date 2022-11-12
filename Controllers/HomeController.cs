@@ -80,7 +80,7 @@ namespace Taller.Controllers
             _DBContext.Autos.Remove(oAuto);
             _DBContext.SaveChanges();
 
-            return View(oAuto);
+            return RedirectToAction("Index", "Home");
         }
 
 
